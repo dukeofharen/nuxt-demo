@@ -6,21 +6,38 @@
       path:
         equals: /api/categories
   response:
+    enableDynamicMode: true
     json: |-
       [
         {
           "id": 1,
-          "name": "Fotolijsten"
+          "name": "((fake_data:words:2))"
         },
         {
           "id": 2,
-          "name": "Placemats"
+          "name": "((fake_data:words:3))"
         },
         {
           "id": 3,
-          "name": "Posters"
+          "name": "((fake_data:words:4))"
         }
       ]
+    abortConnection: false
+  priority: 0
+  enabled: true
+- id: get-category
+  conditions:
+    method: GET
+    url:
+      path:
+        regex: /api/categories/(\d)+
+  response:
+    enableDynamicMode: true
+    json: |-
+      {
+        "id": "((display_url:'\/api\/categories\/([0-9]+)'))",
+        "name": "((fake_data:words))"
+      }
     abortConnection: false
   priority: 0
   enabled: true
