@@ -15,5 +15,5 @@
 <script setup lang="ts">
 import type { Category } from '~/domain/category';
 
-const {data: categories} = await useCustomFetch<Category[]>("/api/categories");
+const {data: categories} = await useCustomFetch<Category[]>("/api/categories", {key:"cc-categories"});
 </script>
