@@ -12,9 +12,9 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     apiSecret: "geheim123",
+    apiBaseServer: "http://localhost:3000",
     public: {
       apiBaseClient: "http://localhost:3000",
-      apiBaseServer: "http://localhost:3000",
       apiPublic: "publicSecret",
     },
   },

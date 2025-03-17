@@ -14,3 +14,6 @@ services:
       context: .
     ports:
       - "3001:3000"
+    environment:
+      NUXT_PUBLIC_API_BASE_CLIENT: 'http://localhost:5001'
+      NUXT_API_BASE_SERVER: 'http://httplaceholder:5000'

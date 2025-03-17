@@ -22,6 +22,8 @@
           "name": "((fake_data:words:4))"
         }
       ]
+    headers:
+      Access-Control-Allow-Origin: '*'
     abortConnection: false
   priority: 0
   enabled: true
@@ -38,6 +40,8 @@
         "id": "((display_url:'\/api\/categories\/([0-9]+)'))",
         "name": "((fake_data:words))"
       }
+    headers:
+      Access-Control-Allow-Origin: '*'
     abortConnection: false
   priority: 0
   enabled: true
