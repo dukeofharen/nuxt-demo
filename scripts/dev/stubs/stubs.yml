@@ -45,3 +45,13 @@
     abortConnection: false
   priority: 0
   enabled: true
+- id: non-seo-critical
+  conditions:
+    method: GET
+    url:
+      path:
+        equals: /api/non-seo-critical
+  response:
+    json: |
+      {"result": "This data was fetched by the API, but is only client side."}
+    extraDuration: 1000
