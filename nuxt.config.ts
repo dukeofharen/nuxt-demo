@@ -18,6 +18,18 @@ export default defineNuxtConfig({
       apiPublic: "publicSecret",
     },
   },
+  $development: {
+    runtimeConfig: {
+      header: "Nuxt Demo Dev"
+    }
+  },
+  $env: {
+    production: {
+      runtimeConfig: {
+        header: "Nuxt Demo Live"
+      }
+    }
+  },
   nitro: {
     devProxy: {
       "/api": {
