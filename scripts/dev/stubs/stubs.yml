@@ -1,0 +1,26 @@
+# This .yml file was created with HttPlaceholder. For more information, go to http://httplaceholder.com.
+- id: get-categories
+  conditions:
+    method: GET
+    url:
+      path:
+        equals: /api/categories
+  response:
+    json: |-
+      [
+        {
+          "id": 1,
+          "name": "Fotolijsten"
+        },
+        {
+          "id": 2,
+          "name": "Placemats"
+        },
+        {
+          "id": 3,
+          "name": "Posters"
+        }
+      ]
+    abortConnection: false
+  priority: 0
+  enabled: true
