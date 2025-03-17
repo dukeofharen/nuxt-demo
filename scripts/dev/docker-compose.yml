@@ -1,0 +1,14 @@
+# A Docker Compose example that starts HttPlaceholder with a file storage location, so all stubs (that are made through the UI or API) and requests are saved to that folder.
+version: '3.8'
+services:
+  httplaceholder:
+    image: dukeofharen/httplaceholder:2024.12.27.10
+    environment:
+      verbose: 'true'
+      dev: true
+      inputFile: '/etc/httplaceholder'
+    ports:
+      - "5000:5000"
+    restart: on-failure
+    volumes:
+      - ./stubs:/etc/httplaceholder
