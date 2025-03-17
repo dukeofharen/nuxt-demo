@@ -1,4 +1,3 @@
-version: '3.8'
 services:
   httplaceholder:
     image: dukeofharen/httplaceholder:2024.12.27.10
@@ -7,7 +6,11 @@ services:
       dev: true
       inputFile: '/etc/httplaceholder'
     ports:
-      - "5000:5000"
-    restart: on-failure
+      - "5001:5000"
     volumes:
-      - ./stubs:/etc/httplaceholder
+      - ./scripts/dev/stubs:/etc/httplaceholder
+  nuxt-demo:
+    build:
+      context: .
+    ports:
+      - "3001:3000"

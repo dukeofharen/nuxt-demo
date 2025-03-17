@@ -1,4 +1,7 @@
 export const useCustomFetch: typeof useFetch = (request, opts) => {
   const config = useRuntimeConfig();
-  return useFetch(request, { baseURL: config.public.apiBase, ...opts });
+  const baseUrl = import.meta.server
+    ? config.public.apiBaseServer
+    : config.public.apiBaseClient;
+  return useFetch(request, { baseURL: baseUrl, ...opts });
 };
