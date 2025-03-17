@@ -9,6 +9,7 @@ export default defineNuxtConfig({
       charset: "utf-16",
       viewport: "width=device-width, initial-scale=1, maximum-scale=1",
     },
+    pageTransition: { name: "page", mode: "out-in" },
   },
   runtimeConfig: {
     apiSecret: "geheim123",
@@ -20,15 +21,15 @@ export default defineNuxtConfig({
   },
   $development: {
     runtimeConfig: {
-      header: "Nuxt Demo Dev"
-    }
+      header: "Nuxt Demo Dev",
+    },
   },
   $env: {
     production: {
       runtimeConfig: {
-        header: "Nuxt Demo Live"
-      }
-    }
+        header: "Nuxt Demo Live",
+      },
+    },
   },
   nitro: {
     devProxy: {

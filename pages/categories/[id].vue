@@ -7,4 +7,7 @@
 import type { Category } from '~/domain/category';
 const route = useRoute();
 const {data: category} = await useCustomFetch<Category>(`/api/categories/${route.params.id}`, {key: "cc-category-detail"});
+useHead({
+    title: category.value?.name
+})
 </script>
